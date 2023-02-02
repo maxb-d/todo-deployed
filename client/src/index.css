@@ -1,13 +1,258 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: rgb(194, 194, 194);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: rgb(149, 149, 149);
+}
+
+.App {
+  background-color: rgb(59, 59, 59);
+}
+
+.body-container {
+  display: flex;
+}
+
+/****************
+* Overlay Header
+****************/
+.overlay-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(53, 53, 53);
+  padding: 0 20px;
+  height: 60px;
+  cursor:default;
+}
+
+.logout {
+  background-color: rgb(251, 125, 125);
+  border: none;
+  height: 35px;
+  width: 35px;
+  border-radius: 999px;
+  line-height: 50px;
+  padding-left: 3px;
+  color: white
+}
+
+.signin {
+  background-color: rgb(61, 204, 61);
+  border: none;
+  height: 35px;
+  width: 35px;
+  border-radius: 999px;
+  line-height: 45px;
+  color: white;
+  margin-right: 10px;
+}
+/***************
+* Overlay Navbar
+***************/
+.todos-collection {
+  display: flex;
+  flex-direction: column;
+  cursor:default;
+}
+
+.todo-a {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navbar-container {
+  padding: 35px 25px;
+  width: 400px;
+}
+
+.navbar-todos--title {
+  margin-bottom: 20px;
+  color: rgb(216, 216, 216);
+  font-weight: 700;
+}
+
+.todos-collection {
+  margin-left: 5px;
+}
+
+
+/***************
+* Todo App
+***************/
+.app-container {
+  width: 100%;
+  height: 100vh;
+}
+
+.todo-app {
+  width: auto;
+  background-color: rgb(41, 41, 41);
+  height: 100vh;
+}
+
+.todo-stats {
+  display: flex;
+  justify-content: end;
+  padding: 20px;
+  color: rgb(167, 167, 167);
+}
+
+.todos-pending {
+  margin-right: 20px;
+  color: orange;
+}
+
+.todo-head {
+  display: flex;
+  margin-left: 35px;
+  margin-bottom: 50px;
+  color: white;
+}
+
+.go-back {
+  margin-right: 20px;
+  color: white;
+  background-color: rgb(79, 79, 79);
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.todo-add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.todo-checkbox {
+  width: 20px;
+	height: 20px;
+	margin-right: 20px;
+	border-radius: 50%;
+	background-color: white;
+	transition: 0.4s;
+  margin-left: 20px;
+}
+
+.collection-checkbox {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+  border-radius: 16px;
+  background-color: rgb(151, 151, 151);
+  transition: 0.4s;
+  margin-left: 20px;
+}
+
+.collection-checkbox-selected {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+  border-radius: 16px;
+  background-color: rgb(60, 169, 60);
+  transition: 0.4s;
+  margin-left: 20px;
+}
+
+.collection-name:hover {
+  color: white;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.todo-checkbox-complete {
+  width: 20px;
+	height: 20px;
+	margin-right: 20px;
+	border-radius: 50%;
+	background-color: rgb(106, 203, 106);
+	transition: 0.4s;
+  margin-left: 20px;
+}
+
+.add {
+  height: 40px;
+  width: 40px;
+  border-radius: 16px;
+  background: rgb(239, 127, 127);
+  border: none;
+  margin-right: 20px;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.add:hover {
+  opacity: 0.8;
+}
+
+.todo:hover {
+	opacity: 0.8;
+}
+
+.todo {
+  margin-left: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(61, 61, 61);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: x-large;
+  max-width: 500px;
+  height: 60px;
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 6px 24px, rgba(0,0,0, 0.08) 0 0 0 1px;
+
+}
+
+.pending-title {
+  display: flex;
+  justify-content: center;
+  font-size: 35px;
+  margin-top: 60px;
+  margin-bottom: 35px;
+}
+
+.complete-title {
+  display: flex;
+  justify-content: center;
+  font-size: xx-large;
+  margin-bottom: 35px;
+  margin-top: 60px;
+}
+
+.todo--buttons-container{
+  display: flex;
+  align-items: center;
+}
+
+.edit {
+  cursor: pointer;
+  background-color: rgb(61, 61, 61);
+  border: none;
+}
+
+.delete {
+  cursor: pointer;
+  background-color: rgb(61, 61, 61);
+  border: none;
+  margin-right: 20px;
+  margin-left: 10px;
+  color: rgb(255, 95, 95);
 }
